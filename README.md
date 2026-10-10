@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis%20Savenko&fontSize=42&fontColor=f5f5f7&animation=fadeIn&fontAlignY=50">
-  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis%20Savenko&fontSize=42&fontColor=1d1d1f&animation=fadeIn&fontAlignY=50">
-  <img alt="Denis Savenko" src="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis%20Savenko&fontSize=42&fontColor=1d1d1f&animation=fadeIn&fontAlignY=50" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis&fontSize=42&fontColor=f5f5f7&animation=fadeIn&fontAlignY=50">
+  <source media="(prefers-color-scheme: light)" srcset="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis&fontSize=42&fontColor=1d1d1f&animation=fadeIn&fontAlignY=50">
+  <img alt="Denis" src="https://capsule-render.vercel.app/api?type=transparent&height=120&text=Denis&fontSize=42&fontColor=1d1d1f&animation=fadeIn&fontAlignY=50" width="100%">
 </picture>
 
 <p align="center">
