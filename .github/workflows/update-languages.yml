@@ -1,0 +1,39 @@
+name: Update Language Statistics
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # At 00:00 on day 1 of every month
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate languages card
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .github/scripts/generate_languages.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Denis"
+          git config user.email "den4k.savenko@gmail.com"
+          if git status --porcelain | grep -q "languages.svg"; then
+            git add languages.svg
+            git commit -m "Auto-update language statistics"
+            git push
+          else
+            echo "No changes in language statistics."
+          fi

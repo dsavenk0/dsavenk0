@@ -1,24 +1,40 @@
 ![Dennis](banner.png)
 
-I build systems for market analysis and tools that run on the device in front
-of you: a real-time crypto order-flow platform, firmware research for cameras
-and microcontrollers, native macOS apps in Swift, an Android home screen for a
-projector, and local LLM inference on Apple Silicon. Documented decisions, small
-dependency trees, and nothing sent to a cloud that doesn't need to be.
+Building high-throughput data systems, embedded firmware research, local ML runtimes, and native platform tools. Minimal dependencies, on-device execution, and reliable production architectures.
 
-### Projects
+### Focus Areas
 
-| | Project | What it is | Stack |
-|---|---|---|---|
-| 📈 | **QUANTIX** · *private* | My largest project: real-time crypto order-flow platform — 7 exchanges, Go microservices, L2 heatmap, CVD, OI, anomaly detection, alerts | Next.js · Go · ClickHouse |
-| 🕯️ | [**KLineChart-Pro**](https://github.com/dsavenk0/KLineChart-Pro) | QUANTIX charting engine: extended [KLineChart](https://github.com/klinecharts/KLineChart) with undo/redo, script indicators, brush tool, HMA / Pivot / VWAP | TypeScript |
-| 🧠 | [**AI-llm-Engine**](https://github.com/dsavenk0/AI-llm-Engine) | Local-first AI workspace for macOS: fast Qwen / JANG inference, agents and workflows on Apple Silicon (MLX) | Python · MLX |
-| 📷 | **X-enOS** · *private* | Firmware extensions for Fujifilm X cameras, starting with the X-T10: software AF-S/AF-C/MF, a stock-style menu and film presets, built through firmware decomposition and emulation | Python · Rust · C |
-| 📺 | **QubitOS** · *private* | A home screen for an Android projector, designed for a physical remote: predictive D-pad keyboard, browser, app library; no root, stock firmware untouched | Kotlin · Android |
-| 📡 | **netKillUI** · *private* | Native macOS ARP toolkit in SwiftUI with zero dependencies: device discovery, cut and intercept modes, stealth mode, spoof detection | Swift · BPF |
-| 🛰️ | **netKill-esp32** · *private* | Standalone ESP32 Wi-Fi multitool with a Flipper-style web launcher | C · ESP-IDF |
+#### 📈 Market Microstructure & Streaming
+- Low-latency multi-exchange order-flow ingestion pipelines (Go)
+- High-volume time-series storage & analytical queries (ClickHouse)
+- Real-time metrics: Level 2 order book heatmaps, CVD, Open Interest, and anomaly detection
+- Custom high-framerate canvas charting engine with scriptable indicators (TypeScript)
 
-### Stack
+#### 🌐 Infrastructure & Production DevOps
+- Linux VPS administration, server hardening, firewall setup, and reverse proxying
+- Automated build pipelines, versioned deployments, and zero-downtime release rollouts
+- 24/7 service supervision, automated crash recovery, and health checks (systemd, Docker)
+- ClickHouse partition management and retention policies under heavy disk I/O
+
+#### 🔬 Embedded Research & Reverse Engineering
+- Proprietary ARM firmware decomposition, static analysis, and hardware emulation
+- Extending closed-source firmwares: algorithmic hardware control and custom UI overlays (C, Rust, Python)
+- Low-level network research via Berkeley Packet Filters (BPF) and raw sockets
+- Bare-metal and RTOS firmware development for microcontrollers (ESP32 / ESP-IDF)
+
+#### 🧠 On-Device Machine Learning
+- Fast local LLM inference on Apple Silicon unified memory (Apple MLX, Python)
+- Fully offline agent runtimes, tool-calling pipelines, and autonomous workflows
+- Memory-efficient tensor execution and quantization under constrained environments
+
+#### 💻 Systems & Native Interfaces
+- Zero-dependency macOS desktop tools interfacing directly with kernel APIs (Swift, SwiftUI)
+- Custom Android launcher tailored for remote/D-pad navigation without root access (Kotlin)
+- Defensive software design: minimal third-party dependencies and deterministic codebases
+
+### Stack & Codebase
+
+<img src="languages.svg" alt="Most Used Languages" width="100%" />
 
 <p>
   <img src="https://img.shields.io/badge/Swift-1d1d1f?style=flat-square&logo=swift&logoColor=f5f5f7" alt="Swift">
@@ -29,15 +45,8 @@ dependency trees, and nothing sent to a cloud that doesn't need to be.
   <img src="https://img.shields.io/badge/Kotlin-1d1d1f?style=flat-square&logo=kotlin&logoColor=f5f5f7" alt="Kotlin">
   <img src="https://img.shields.io/badge/TypeScript-1d1d1f?style=flat-square&logo=typescript&logoColor=f5f5f7" alt="TypeScript">
   <img src="https://img.shields.io/badge/ClickHouse-1d1d1f?style=flat-square&logo=clickhouse&logoColor=f5f5f7" alt="ClickHouse">
+  <img src="https://img.shields.io/badge/Linux-1d1d1f?style=flat-square&logo=linux&logoColor=f5f5f7" alt="Linux">
+  <img src="https://img.shields.io/badge/Docker-1d1d1f?style=flat-square&logo=docker&logoColor=f5f5f7" alt="Docker">
   <img src="https://img.shields.io/badge/ARM-1d1d1f?style=flat-square&logo=arm&logoColor=f5f5f7" alt="ARM">
   <img src="https://img.shields.io/badge/ESP32-1d1d1f?style=flat-square&logo=espressif&logoColor=f5f5f7" alt="ESP32">
 </p>
-
-### How I work
-
-- **On-device first.** Models, tools and data stay where the user is.
-- **Evidence over assumption.** Reverse-engineering results are hash-bound,
-  emulated before they touch hardware, and recorded with their limits.
-- **Small and native.** Few dependencies, platform APIs, readable code.
-
-<sub>Private projects are listed for context; their repositories are not public yet.</sub>
